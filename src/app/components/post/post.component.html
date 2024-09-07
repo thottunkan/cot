@@ -1,1 +1,35 @@
-<p>post works!</p>
+<div class="max-w-sm mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+    <!-- Image -->
+    <div class="flex items-center mb-4">
+        <img class="w-10 h-10 rounded-full object-cover" [src]="userAvatarUrl" alt="User Avatar">
+        <span class="ml-2 font-semibold text-gray-800">{{ userName }}</span>
+      </div>
+      
+    <img class="w-full h-64 object-cover" src="{{ postImageUrl }}" alt="Post Image">
+  
+    <!-- Card Content -->
+    <div class="p-4">
+      <!-- User Info -->
+      
+  
+      <!-- Post Description -->
+      <p class="text-gray-700 text-base mb-4">
+        {{ postDescription }}
+      </p>
+  
+      <!-- Actions -->
+      <div class="flex items-center space-x-4">
+        <button class="text-gray-500 hover:text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 19.621a5.002 5.002 0 010-7.08m0 0A5.002 5.002 0 0012 7a5.002 5.002 0 006.879 5.541m-6.879 7.08a5.002 5.002 0 01-6.879-5.541M12 12l.01.01m0 0L12 12m0 0l-.01-.01"></path>
+          </svg>
+        </button>
+        <button class="text-gray-500 hover:text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 11l-2 2m0 0l-2-2m2 2V4m7 7v1m0 0v1m0 0v1m-3 2h-4m0 0v1m0 0h4m-4-1h4m-2 0v-1m0 0h-2m-2 0h2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
