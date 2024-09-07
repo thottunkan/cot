@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { PostComponent } from './components/post/post.component';
 import { NewsalertComponent } from './components/newsalert/newsalert.component';
+import { CotadminComponent } from './components/cotadmin/cotadmin.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { NewsalertComponent } from './components/newsalert/newsalert.component';
     FooterComponent,
     WelcomeComponent,
     PostComponent,
-    NewsalertComponent
+    NewsalertComponent,
+    CotadminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
