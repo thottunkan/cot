@@ -1,36 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { AstraDBService } from 'src/app/data/astra/AstraDBService';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cotadmin',
+  standalone: true,
+  imports: [],
   templateUrl: './cotadmin.component.html',
-  styleUrls: ['./cotadmin.component.css']
+  styleUrl: './cotadmin.component.css'
 })
-export class CotadminComponent implements OnInit {
- // constructor(private astraDBService: AstraDBService) {}
-  ngOnInit(): void {
-   
-   // this.astradb.test();
-  //  this.createCollection();
-  //  this.insertDocuments();
-  //  this.updateDocument();
-  //  this.findDocument();
-  }
-  
-  // async createCollection(): Promise<void> {
-  //   await this.astraDBService.createCollection();
-  // }
+export class CotadminComponent {
 
-  // async insertDocuments(): Promise<void> {
-  //   await this.astraDBService.insertDocuments();
-  // }
-
-  // async updateDocument(): Promise<void> {
-  //   await this.astraDBService.updateDocument();
-  // }
-
-  // async findDocument(): Promise<void> {
-  //   await this.astraDBService.findDocument();
-  // }
 }

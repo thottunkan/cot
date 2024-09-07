@@ -8,7 +8,7 @@ describe('CotadminComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CotadminComponent ]
+      imports: [CotadminComponent]
     })
     .compileComponents();
 
