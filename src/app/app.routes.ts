@@ -2,10 +2,11 @@ import { Routes } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { HomeComponent } from './components/pages/user/home/home.component';
 import { CotadminComponent } from './components/pages/admin/cotadmin/cotadmin.component';
-import { LoginComponent } from './components/login/login.component';
+
 import { AdminhomeComponent } from './components/pages/admin/adminhome/adminhome.component';
 import { AddpostComponent } from './components/pages/admin/addpost/addpost.component';
 import { ViewallpostComponent } from './components/viewallpost/viewallpost.component';
+import { LoginComponent } from './components/pages/admin/login/login.component';
 
 export const  routes: Routes = [
     {path:"", component: WelcomeComponent},
