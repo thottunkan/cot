@@ -15,3 +15,4 @@ import { NavbarComponent } from '../../../utils/navbar/navbar.component';
 export class HomeComponent {
 
 }
+ 

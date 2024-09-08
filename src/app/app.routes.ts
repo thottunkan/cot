@@ -7,6 +7,7 @@ import { AdminhomeComponent } from './components/pages/admin/adminhome/adminhome
 import { AddpostComponent } from './components/pages/admin/addpost/addpost.component';
 import { ViewallpostComponent } from './components/viewallpost/viewallpost.component';
 import { LoginComponent } from './components/pages/admin/login/login.component';
+import { NarayanaguruComponent } from './components/pages/user/narayanaguru/narayanaguru.component';
 
 export const  routes: Routes = [
     {path:"", component: WelcomeComponent},
@@ -14,6 +15,7 @@ export const  routes: Routes = [
     {path:"cotadmin", component: CotadminComponent},
     {path:"login", component: LoginComponent},
     {path:"admin", component: AdminhomeComponent},
+    {path:"sng", component: NarayanaguruComponent},
     {path:"admin/addpost", component: AddpostComponent},
     {path:"admin/viewallposts", component: ViewallpostComponent},
   ];
