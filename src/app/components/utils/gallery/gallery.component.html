@@ -1,0 +1,41 @@
+<style>
+    #imageModal {
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+<div class="container mx-auto px-4 py-8">
+    <h3 class="text-4xl font-extrabold text-center pb-4">Gallery</h3>
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+      <div *ngFor="let image of images" class="relative group overflow-hidden rounded-lg cursor-pointer" (click)="openModal(image)">
+        <img [src]="image.thumbnail" alt="Gallery Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="text-white text-lg">View Image</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for full-size image -->
+  <div id="imageModal" tabindex="-1" aria-hidden="true" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50" *ngIf="selectedImage">
+    <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
+      <button type="button" class="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" (click)="closeModal()">
+        <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <!-- Safe navigation operator added to ensure selectedImage is not null -->
+      <img [src]="selectedImage.fullsize" alt="Full-size Image" class="max-w-full max-h-screen object-cover">
+    </div>
+  </div>
+  
