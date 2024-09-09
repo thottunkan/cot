@@ -8,12 +8,14 @@ import { AddpostComponent } from './components/pages/admin/addpost/addpost.compo
 import { ViewallpostComponent } from './components/viewallpost/viewallpost.component';
 import { LoginComponent } from './components/pages/admin/login/login.component';
 import { NarayanaguruComponent } from './components/pages/user/narayanaguru/narayanaguru.component';
+import { FAQComponent } from './components/pages/user/faq/faq.component';
 
 export const  routes: Routes = [
-    {path:"", component: WelcomeComponent},
-    {path:"home", component: HomeComponent},
+    {path:"", component: HomeComponent},
+    {path:"home", redirectTo:""},
     {path:"cotadmin", component: CotadminComponent},
     {path:"login", component: LoginComponent},
+    {path:"faq", component: FAQComponent},
     {path:"admin", component: AdminhomeComponent},
     {path:"sng", component: NarayanaguruComponent},
     {path:"admin/addpost", component: AddpostComponent},
